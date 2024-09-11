@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 10:12:12 by moelalj           #+#    #+#             */
-/*   Updated: 2024/09/11 10:13:09 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/09/11 14:39:33 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 int main()
 {
-	Bureaucrat n1;
-
+	Bureaucrat n1("b1", 2);
+	n1.increment();
+	std::cout << n1;
 	return (0);
 }
