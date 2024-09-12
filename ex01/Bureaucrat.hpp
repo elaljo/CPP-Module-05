@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 09:46:06 by moelalj           #+#    #+#             */
-/*   Updated: 2024/09/12 10:28:57 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/09/12 12:02:11 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 class Bureaucrat{
 	private:
-		std::string name;
+		const std::string name;
 		int grade;
 	public:
 		Bureaucrat();
