@@ -5,13 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/11 09:46:06 by moelalj           #+#    #+#             */
-/*   Updated: 2024/09/11 16:32:54 by moelalj          ###   ########.fr       */
+/*   Created: 2024/09/11 14:42:49 by moelalj           #+#    #+#             */
+/*   Updated: 2024/09/11 14:42:58 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string>
 #include <iostream>
+#include <ostream>
 #include <exception>
 
 class Bureaucrat{
