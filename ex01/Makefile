@@ -6,7 +6,7 @@
 #    By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/11 09:52:30 by moelalj           #+#    #+#              #
-#    Updated: 2024/09/11 09:53:04 by moelalj          ###   ########.fr        #
+#    Updated: 2024/09/12 12:01:23 by moelalj          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,12 +20,13 @@ RM = rm -rf
 
 SRC = main.cpp\
 			Bureaucrat.cpp\
+			Form.cpp\
 
 OBJS := $(SRC:.cpp=.o)
 
 all: $(NAME)
 
-%.o:%.cpp Bureaucrat.hpp
+%.o:%.cpp Bureaucrat.hpp Form.hpp
 	$(g++) $(CPPFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS)
