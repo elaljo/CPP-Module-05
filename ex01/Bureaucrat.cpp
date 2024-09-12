@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/11 14:43:08 by moelalj           #+#    #+#             */
-/*   Updated: 2024/09/11 14:43:09 by moelalj          ###   ########.fr       */
+/*   Created: 2024/09/11 09:47:04 by moelalj           #+#    #+#             */
+/*   Updated: 2024/09/12 10:16:19 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,10 @@ Bureaucrat::Bureaucrat(std::string name, int grade){
 	std::cout << "Constructor Called" << std::endl;
 	this->name = name;
 	this->grade = grade;
-	Bureaucrat::GradeTooHighException();
-	Bureaucrat::GradeTooLowException();
+	if (grade < 1)
+		throw(Bureaucrat::GradeTooHighException());
+	if (grade > 150)
+		throw(Bureaucrat::GradeTooLowException());
 }
 Bureaucrat::Bureaucrat(const Bureaucrat& otherBureaucrat ){
 	std::cout << "Copy constructor called" << std::endl;
@@ -49,29 +51,10 @@ int Bureaucrat::getGrade() const{
 	return this->grade;
 }
 
-void Bureaucrat::GradeTooHighException(){
-	try{
-		if (grade < 1)
-			throw std::exception();
-	}
-	catch(std::exception &e){
-		std::cout << "Exception Caught: Grade is to high.." << std::endl;
-	}
-}
-void	Bureaucrat::GradeTooLowException(){
-	try{
-		if (grade > 150)
-			throw std::exception();
-	}
-	catch(std::exception &e){
-		std::cout << "Exception Caught: Grade is to low.." << std::endl;
-	}
-}
-
 void	Bureaucrat::increment(){
 	grade--;
 	if (grade < 1)
-		Bureaucrat::GradeTooHighException();
+		throw(Bureaucrat::GradeTooHighException());
 }
 void	Bureaucrat::decrement(){
 	grade++;

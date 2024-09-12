@@ -5,8 +5,15 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/11 14:43:25 by moelalj           #+#    #+#             */
-/*   Updated: 2024/09/11 14:43:26 by moelalj          ###   ########.fr       */
+/*   Created: 2024/09/12 11:01:45 by moelalj           #+#    #+#             */
+/*   Updated: 2024/09/12 11:24:38 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Form.hpp"
+
+Form::Form():name("Defalt"){
+	this->is_signed = false;
+	this->grade_to_sign = 10;
+	this->grade_to_exec = 20;
+}

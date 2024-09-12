@@ -5,8 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/11 14:42:42 by moelalj           #+#    #+#             */
-/*   Updated: 2024/09/11 14:42:43 by moelalj          ###   ########.fr       */
+/*   Created: 2024/09/11 10:12:12 by moelalj           #+#    #+#             */
+/*   Updated: 2024/09/12 10:40:43 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Bureaucrat.hpp"
+
+int main()
+{
+	try{
+		Bureaucrat n1("nawfal", 1);
+		std::cout << n1;
+		Bureaucrat n2 = n1;
+		n2.increment();
+		std::cout << n2;
+	}
+	catch (std::exception &e){
+		std::cerr << "Exception caught: " << e.what() << std::endl;
+	}
+	return (0);
+}
