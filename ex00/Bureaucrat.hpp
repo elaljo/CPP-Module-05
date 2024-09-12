@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 09:46:06 by moelalj           #+#    #+#             */
-/*   Updated: 2024/09/11 16:32:54 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/09/12 10:28:57 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,17 @@ class Bureaucrat{
 		std::string getName()const; 
 		int getGrade() const;
 		
-		void	GradeTooHighException();
-		void	GradeTooLowException();
+		class GradeTooHighException : public std::exception{
+			virtual const char* what() const throw(){
+				return("Grade too high..");
+			}
+		};
+		
+		class GradeTooLowException : public std::exception{
+			virtual const char* what() const throw(){
+				return ("Grade too Low..");
+			}
+		};
 		
 		void	increment();
 		void	decrement();
