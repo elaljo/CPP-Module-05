@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 10:12:12 by moelalj           #+#    #+#             */
-/*   Updated: 2024/09/12 10:31:48 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/09/12 10:40:43 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int main()
 		std::cout << n2;
 	}
 	catch (std::exception &e){
-		std::cout << "Exception caught: " << e.what() << std::endl;
+		std::cerr << "Exception caught: " << e.what() << std::endl;
 	}
 	return (0);
 }
