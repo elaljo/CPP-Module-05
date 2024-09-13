@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 11:01:45 by moelalj           #+#    #+#             */
-/*   Updated: 2024/09/13 17:44:21 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/09/13 20:48:40 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ std::ostream& operator<<(std::ostream& os, const Form& obj){
 }
 
 void Form::beSigned(Bureaucrat& b){
-	if (getGrade_to_sign() < 1)
+	if (getGrade_to_sign() > 150)
 		throw Form::GradeTooLowException();
 	if (b.getGrade() <= getGrade_to_sign())
 		is_signed = true;
@@ -67,5 +67,5 @@ void	Form::signForm(Bureaucrat &b){
 	if (getSigned() == true)
 		std::cout << b.getName() << " signed " << getName() << std::endl;
 	else
-		std::cout << b.getName() << " couldn't sign " << getName() << " because the grade is too low to sign the form" << std::endl;
+		std::cout << b.getName() << " couldn't sign " << getName() << " because bureaucrat kasol" << std::endl;
 }
