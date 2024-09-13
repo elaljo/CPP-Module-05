@@ -6,23 +6,23 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 10:12:12 by moelalj           #+#    #+#             */
-/*   Updated: 2024/09/12 10:40:43 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/09/13 17:44:37 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 int main()
 {
 	try{
-		Bureaucrat n1("nawfal", 1);
-		std::cout << n1;
-		Bureaucrat n2 = n1;
-		n2.increment();
-		std::cout << n2;
+		Form f("wr9at lmawdow", 20, 35);
+		Bureaucrat b("Elalj", 2);
+		f.beSigned(b);
+		f.signForm(b);
 	}
-	catch (std::exception &e){
-		std::cerr << "Exception caught: " << e.what() << std::endl;
+	catch (std::exception& e)
+	{
+		std::cout << "Exception caught: " << e.what() << std::endl;
 	}
 	return (0);
 }

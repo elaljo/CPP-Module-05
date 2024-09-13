@@ -6,12 +6,11 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 11:01:43 by moelalj           #+#    #+#             */
-/*   Updated: 2024/09/12 11:24:42 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/09/13 17:38:04 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
+#include "Bureaucrat.hpp"
 
 class Form{
 	private:
@@ -21,6 +20,9 @@ class Form{
 		const int grade_to_exec;
 	public:
 		Form();
+		Form(std::string name, int, int);
+		Form(const Form &copy);
+		Form& operator=(const Form& copy);
 		~Form();
 		
 		class GradeTooHighException : public std::exception{
@@ -33,5 +35,14 @@ class Form{
 				return ("Grade too Low..");
 			}
 		};
+
+		std::string getName() const;
+		int getSigned() const;
+		int getGrade_to_sign() const;
+		int getGrade_to_exec() const;
+
+		void	beSigned(Bureaucrat& b);
+		void	signForm(Bureaucrat &b);
 		
 };
+std::ostream& operator<<(std::ostream& os, const Form& obj);
