@@ -6,19 +6,27 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 16:37:46 by moelalj           #+#    #+#             */
-/*   Updated: 2024/11/13 14:39:52 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/11/15 10:52:32 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
-Form::Form():name("noname"),grade_to_sign(10),grade_to_exec(0)
+Form::Form():name("noname"),grade_to_sign(10),grade_to_exec(20)
 {
     Signed_status = 0;
+    if (grade_to_sign < 1 || grade_to_exec < 1)
+        throw(Form::GradeTooHighException());
+    else if (grade_to_sign > 150 || grade_to_exec > 150)
+        throw(Form::GradeTooLowException());
     std::cout << "Default Constructor Called" << std::endl;
 }
-Form::Form(std::string name, int sign_grade) : name(name), grade_to_sign(sign_grade), grade_to_exec(0){
+Form::Form(std::string name, int sign_grade) : name(name), grade_to_sign(sign_grade), grade_to_exec(20){
     Signed_status = 0;
+    if (grade_to_sign < 1 || grade_to_exec < 1)
+        throw(Form::GradeTooHighException());
+    else if (grade_to_sign > 150 || grade_to_exec > 150)
+        throw(Form::GradeTooLowException());
     std::cout << "Constructor Caleld" << std::endl;
 }
 Form::Form(const Form& rhs):name(rhs.name),grade_to_sign(rhs.grade_to_sign),grade_to_exec(rhs.grade_to_exec){

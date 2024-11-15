@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 10:34:30 by moelalj           #+#    #+#             */
-/*   Updated: 2024/11/13 13:59:39 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/11/15 10:59:14 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,13 +57,10 @@ void    Bureaucrat::decrement(){
 }
 
 void Bureaucrat::signForm(Form& form){
-    try{
-        form.beSigned(*this);
+    if (form.getSigned_status() == true)
         std::cout << getName() << " signed " << form.getName() << std::endl;
-    }
-    catch(std::exception &e){
-        std::cout << getName() << " couldn't sign " << form.getName() << " because " << e.what() << std::endl;
-    }
+    else
+        std::cout << getName() << " couldn't sign " << form.getName() << " because bureaucrat grade is not high enough." << std::endl;
 }
 
 std::ostream& operator<<(std::ostream& cout, const Bureaucrat& obj){

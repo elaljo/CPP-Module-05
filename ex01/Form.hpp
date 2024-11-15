@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 16:37:49 by moelalj           #+#    #+#             */
-/*   Updated: 2024/11/13 14:41:22 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/11/15 10:28:49 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,12 @@ class Form{
         
         class GradeTooHighException : public std::exception{
             virtual const char* what() const throw(){
-                return "Grade Too High.";
+                return "Form: Grade Too High.";
             }
         };
         class GradeTooLowException : public std::exception{
             virtual const char* what() const throw(){
-                return "Grade Too Low.";
+                return "Form: Grade Too Low.";
             }
         };
 
