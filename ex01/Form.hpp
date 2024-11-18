@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 16:37:49 by moelalj           #+#    #+#             */
-/*   Updated: 2024/11/15 11:02:19 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/11/18 14:15:08 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Form{
         const int grade_to_exec;
     public:
         Form();
-        Form(std::string name, int sign_grade);
+        Form(std::string name, int sign_grade, int sign_exec);
         Form(const Form& rhs);
         Form& operator=(const Form& rhs);
         ~Form();

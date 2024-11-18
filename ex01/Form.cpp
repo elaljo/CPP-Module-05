@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 16:37:46 by moelalj           #+#    #+#             */
-/*   Updated: 2024/11/15 11:02:10 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/11/18 14:14:52 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Form::Form():name("noname"),grade_to_sign(10),grade_to_exec(20)
         throw(Form::GradeTooLowException());
     std::cout << "Default Constructor Called" << std::endl;
 }
-Form::Form(std::string name, int sign_grade) : name(name), grade_to_sign(sign_grade), grade_to_exec(20){
+Form::Form(std::string name, int sign_grade, int sign_exec) : name(name), grade_to_sign(sign_grade), grade_to_exec(sign_exec){
     Signed_status = 0;
     if (grade_to_sign < 1 || grade_to_exec < 1)
         throw(Form::GradeTooHighException());
