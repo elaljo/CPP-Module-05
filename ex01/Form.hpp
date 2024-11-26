@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 16:37:49 by moelalj           #+#    #+#             */
-/*   Updated: 2024/11/18 14:15:08 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/11/26 15:22:19 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define FORM_HPP
 
 #include "Bureaucrat.hpp"
-class Bureaucrat; //Forward declaration c++
+class Bureaucrat;
 
 class Form{
     private:
