@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 16:37:49 by moelalj           #+#    #+#             */
-/*   Updated: 2024/11/18 15:27:10 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/11/22 15:45:36 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define AFORM_HPP
 
 #include "Bureaucrat.hpp"
-class Bureaucrat; //Forward declaration c++
+class Bureaucrat;
 
 class AForm{
     private:
@@ -27,7 +27,7 @@ class AForm{
         AForm(std::string name, int , int);
         AForm(const AForm& rhs);
         AForm& operator=(const AForm& rhs);
-        ~AForm();
+        virtual ~AForm();
         
         class GradeTooHighException : public std::exception{
             virtual const char* what() const throw(){

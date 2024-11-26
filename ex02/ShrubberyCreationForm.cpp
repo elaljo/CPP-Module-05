@@ -6,24 +6,24 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 11:08:42 by moelalj           #+#    #+#             */
-/*   Updated: 2024/11/18 15:41:18 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/11/22 14:40:50 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
 
 ShrubberyCreationForm::ShrubberyCreationForm() : AForm("ShrubberyCreationForm", 145, 137){
-    this->target_name = "Default";
     std::cout << "Default Constructor Called" << std::endl;
+    this->target_name = "Default";
 }
 ShrubberyCreationForm::ShrubberyCreationForm(std::string name) : AForm("ShrubberyCreationForm", 145, 137){
-    this->target_name = name;
     std::cout << "Constructor Called" << std::endl;
+    this->target_name = name;
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm& rhs){
-    target_name = rhs.target_name;
     std::cout << "Copy Constructor Called" << std::endl;
+    target_name = rhs.target_name;
 }
 ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationForm& rhs){
     std::cout << "Copy Assignment Called" << std::endl;

@@ -6,23 +6,23 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 15:16:48 by moelalj           #+#    #+#             */
-/*   Updated: 2024/11/18 15:39:51 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/11/22 15:07:09 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
 
 RobotomyRequestForm::RobotomyRequestForm() : AForm("RobotomyRequestForm", 72, 45){
-    target_name = "Default";
     std::cout << "Default Constructor Called" << std::endl;
+    target_name = "Default";
 }
 RobotomyRequestForm::RobotomyRequestForm(std::string name) : AForm("RobotomyRequestForm", 72, 45){
-    target_name = name;
     std::cout << "Constructor Called" << std::endl;
+    target_name = name;
 }
 RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& rhs){
-    target_name = rhs.target_name;
     std::cout << "Copy Constructor Called" << std::endl;
+    target_name = rhs.target_name;
 }
 RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm& rhs){
     std::cout << "Copy Assignment Called" << std::endl;

@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 16:37:46 by moelalj           #+#    #+#             */
-/*   Updated: 2024/11/20 17:42:40 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/11/22 15:54:21 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,24 @@
 
 AForm::AForm():name("noname"),grade_to_sign(0),grade_to_exec(0)
 {
+    std::cout << "Default Constructor Called" << std::endl;
     Signed_status = 0;
     if (grade_to_sign < 1 || grade_to_exec < 1)
         throw(AForm::GradeTooHighException());
     else if (grade_to_sign > 150 || grade_to_exec > 150)
         throw(AForm::GradeTooLowException());
-    std::cout << "Default Constructor Called" << std::endl;
 }
 AForm::AForm(std::string name, int sign_grade, int exec_grade) : name(name), grade_to_sign(sign_grade), grade_to_exec(exec_grade){
+    std::cout << "Constructor Called" << std::endl;
     Signed_status = 0;
     if (grade_to_sign < 1 || grade_to_exec < 1)
         throw(AForm::GradeTooHighException());
     else if (grade_to_sign > 150 || grade_to_exec > 150)
         throw(AForm::GradeTooLowException());
-    std::cout << "Constructor Called" << std::endl;
 }
 AForm::AForm(const AForm& rhs):name(rhs.name),grade_to_sign(rhs.grade_to_sign),grade_to_exec(rhs.grade_to_exec){
-    Signed_status = rhs.Signed_status;
     std::cout << "Copy Constructor Called" << std::endl;
+    Signed_status = rhs.Signed_status;
 }
 AForm& AForm::operator=(const AForm& rhs){
     std::cout << "Copy Assignment Called" << std::endl;
