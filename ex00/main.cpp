@@ -6,7 +6,7 @@
 /*   By: moelalj <moelalj@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 10:51:26 by moelalj           #+#    #+#             */
-/*   Updated: 2024/11/12 21:38:22 by moelalj          ###   ########.fr       */
+/*   Updated: 2024/11/26 15:35:36 by moelalj          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,9 @@
 int main()
 {
     try{
-        Bureaucrat b1("mohamed", 2);
-        Bureaucrat b2;
-        std::cout << b2.getGrade() << std::endl;
-        b2 = b1;
-        std::cout << b2.getGrade() << std::endl;
-        b2.increment();
-        std::cout << b2;
+        Bureaucrat b1("mohamed", 150);
+        b1.decrement();
+        std::cout << b1;
     }
     catch(std::exception &e){
         std::cout << "Exception caught: " << e.what() << std::endl;
